@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user && hash("sha256", $inputPassword) == $user['password']) {
         // Login berhasil
-        header("Location: index.html");
+        header("Location: beranda.html");
         exit();
     } else {
         // Login gagal
