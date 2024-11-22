@@ -50,13 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main>
         <section id="login">
             <h2>Masuk</h2>
-            <form action="beranda.html" method="GET">
+            <form action="login.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-                
+    
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-                
+    
                 <button type="submit">Login</button>
             </form>
         </section>
