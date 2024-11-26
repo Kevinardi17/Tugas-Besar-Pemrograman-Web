@@ -17,7 +17,9 @@ try {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputUsername = trim($_POST['username']);
     $inputPassword = trim($_POST['password']);
-    $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT); // Gunakan password_hash
+    
+    // Hash password
+    $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
 
     // Cek apakah username sudah ada
     $stmt = $pdo->prepare("SELECT * FROM data_pelanggan WHERE username = :username");
