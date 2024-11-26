@@ -1,9 +1,9 @@
 <?php
 // Konfigurasi database
 $host = 'localhost';
-$dbname = 'rentalin.com';  // Nama database
+$dbname = 'rentalin.com';
 $username = 'root';
-$password = ''; // Ubah jika menggunakan password
+$password = '';
 
 // Hubungkan ke database
 try {
@@ -17,7 +17,7 @@ try {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputUsername = trim($_POST['username']);
     $inputPassword = trim($_POST['password']);
-    $hashedPassword = hash("sha256", $inputPassword); // Hash password dengan SHA-256
+    $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT); // Gunakan password_hash
 
     // Cek apakah username sudah ada
     $stmt = $pdo->prepare("SELECT * FROM data_pelanggan WHERE username = :username");
@@ -37,44 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Rentalin.com</title>
-    <link rel="stylesheet" href="styleslogin.css">
-</head>
-<body>
-    <header>
-        <h1>Daftar Akun - Rentalin.com</h1>
-    </header>
-    <main>
-        <section id="signup">
-            <h2>Buat Akun Baru</h2>
-            <form action="signup.php" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-
-                <button type="submit">Sign Up</button>
-            </form>
-            <?php
-            if (!empty($error)) {
-                echo "<p style='color:red;'>$error</p>";
-            }
-            if (!empty($success)) {
-                echo "<p style='color:green;'>$success</p>";
-            }
-            ?>
-            <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
-    </footer>
-</body>
-</html>

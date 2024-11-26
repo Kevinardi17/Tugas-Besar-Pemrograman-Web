@@ -1,11 +1,11 @@
 <?php
-session_start(); // Memulai session
+session_start();
 
 // Konfigurasi database
 $host = 'localhost';
 $dbname = 'rentalin.com';
 $username = 'root';
-$password = ''; // Ubah jika menggunakan password
+$password = '';
 
 // Hubungkan ke database
 try {
@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute(['username' => $inputUsername]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && hash("sha256", $inputPassword) == $user['password']) {
+    if ($user && password_verify($inputPassword, $user['password'])) {
         // Login berhasil, simpan session
         $_SESSION['username'] = $user['username'];
-        header("Location: beranda.php"); // Arahkan ke halaman beranda
+        header("Location: beranda.php");
         exit();
     } else {
         // Login gagal
@@ -36,36 +36,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Rentalin.com</title>
-    <link rel="stylesheet" href="styleslogin.css">
-</head>
-<body>
-    <header>
-        <h1>Login ke Rentalin.com </h1>
-    </header>
-    <main>
-        <section id="login">
-            <h2>Masuk</h2>
-            <form action="login.php" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-    
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-    
-                <button type="submit">Login</button>
-                <?php if (!empty($error)) echo "<p>$error</p>"; ?>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
-    </footer>
-</body>
-</html>
