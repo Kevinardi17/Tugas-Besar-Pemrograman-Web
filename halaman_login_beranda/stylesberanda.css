@@ -1,74 +1,61 @@
-/* Gaya Umum */
+/* Reset dasar */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #0e2b61, #1a2f4b); /* Background gradasi biru muda */
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Gaya untuk elemen main */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
 main {
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
 }
 
-/* Gaya untuk form */
-form {
-    background: #d81010; /* Warna latar belakang putih */
-    padding: 20px;
-    border: 1px solid #e70808;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+main h2 {
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
 }
 
-/* Gaya untuk label */
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #8f1d1d; /* Warna teks gelap untuk label */
-}
-
-/* Gaya untuk input */
-form input {
-    width: 100%;
+footer {
+    text-align: center;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #da0707;
-    border-radius: 5px;
-    transition: border-color 0.3s; /* Transisi untuk efek hover */
-}
-
-form input:focus {
-    border-color: #6a5acd; /* Warna ungu ketika fokus */
-    outline: none; /* Menghilangkan outline default */
-}
-
-/* Gaya untuk button */
-form button {
-    width: 100%;
-    padding: 10px;
-    background: #6a5acd; /* Warna ungu */
-    color: #ffffff; /* Warna teks putih */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s; /* Transisi untuk efek hover */
-}
-
-/* Efek hover pada button */
-form button:hover {
-    background: #5a4db1; /* Warna ungu lebih gelap saat hover */
-}
-
-/* Gaya untuk pesan kesalahan */
-form p {
-    color: red; /* Warna merah untuk pesan kesalahan */
-    font-weight: bold;
+    background: #333;
+    color: white;
+    margin-top: 20px;
 }
