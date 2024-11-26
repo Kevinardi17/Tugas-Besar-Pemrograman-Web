@@ -1,4 +1,6 @@
 <?php
+session_start(); // Memulai session
+
 // Konfigurasi database
 $host = 'localhost';
 $dbname = 'rentalin.com';
@@ -24,8 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && hash("sha256", $inputPassword) == $user['password']) {
-        // Login berhasil
-        header("Location: beranda.html");
+        // Login berhasil, simpan session
+        $_SESSION['username'] = $user['username'];
+        header("Location: beranda.php"); // Arahkan ke halaman beranda
         exit();
     } else {
         // Login gagal
@@ -33,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="id">
@@ -58,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" id="password" name="password" placeholder="Masukkan password" required>
     
                 <button type="submit">Login</button>
+                <?php if (!empty($error)) echo "<p>$error</p>"; ?>
             </form>
         </section>
     </main>
