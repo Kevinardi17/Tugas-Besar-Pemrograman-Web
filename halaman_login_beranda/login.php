@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit">Login</button>
                 <?php if (!empty($error)) echo "<p>$error</p>"; ?>
             </form>
+            <p>Belum punya akun? <a href="signup.php">Daftar di sini</a></p> <!-- Tombol Daftar -->
         </section>
     </main>
     <footer>

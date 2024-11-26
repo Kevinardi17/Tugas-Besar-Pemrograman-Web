@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<p style='color:green;'>$success</p>";
             }
             ?>
-            <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
+            <p>Sudah punya akun? <a href="login.php">Login di sini</a></p> <!-- Tombol Login -->
         </section>
     </main>
     <footer>
