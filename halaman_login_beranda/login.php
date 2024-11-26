@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputPassword = $_POST['password'];
 
     // Periksa pengguna di database
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt = $pdo->prepare("SELECT * FROM data_pelanggan WHERE username = :username");
     $stmt->execute(['username' => $inputUsername]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
