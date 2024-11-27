@@ -1,30 +1,30 @@
-/* Reset dasar */
+/* Global Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    color: #436E5B; 
+    background-color: #FEF1BC; /* Default background */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #436E5B; 
+    color: #FEF1BC; 
+    padding: 1rem;
     text-align: center;
-    padding: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: #444;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 nav ul li {
@@ -32,30 +32,182 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
+    color: #FEF1BC; 
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background: #555;
+    color: #7DC384; 
 }
 
-main {
+/* Hero Section */
+/* Styling logo di bagian hero */
+.logo-hero {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-bottom: 20px; /* Jarak antara logo dan teks */
+}
+
+.hero {
+    background: linear-gradient(180deg, #6A9C77, #7DC384); 
+    color: #FEF1BC; 
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+button {
+    background-color: #7DC384; 
+    color: #FEF1BC; 
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6A9C77; 
+}
+
+/* Services Section */
+.services {
+    background-color: #FEF1BC;
+    color: #436E5B; 
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #6A9C77; 
+    border-radius: 10px;
+    background-color: #7DC384; 
+    color: #FEF1BC; 
+}
+
+.service ul {
+    list-style-type: disc;
+    margin: 1rem 0 0 1.5rem; 
+    padding: 0;
+    color: #FEF1BC; 
+}
+
+.service ul li {
+    margin-bottom: 0.5rem; 
+    font-size: 1rem; 
+}
+
+/* Footer Section */
+footer {
+    background-color: #436E5B; 
+    color: #FEF1BC; 
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.contact-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid #7DC384; 
+    border-radius: 10px;       
+    display: inline-block;     
+    background-color: #FEF1BC; 
+    color: #436E5B;            
+    font-weight: bold;         
+}
+
+.contact-box a {
+    text-decoration: none;
+    color: #6A9C77;            
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-box a:hover {
+    color: #436E5B;            
+}
+
+/* PlayStation Container Styles */
+body {
+    background-color: #000; /* Overriding the body background for PlayStation section */
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.playstation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-main h2 {
-    color: #444;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+.playstation {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    transition: transform 0.3s;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-    margin-top: 20px;
+.playstation:hover {
+    transform: scale(1.1);
+}
+
+.playstation.available {
+    border-color: #0f0; /* Green for available */
+}
+
+.playstation.unavailable {
+    border-color: #f00; /* Red for unavailable */
+}
+
+.status-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.playstation p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 1rem;
 }
