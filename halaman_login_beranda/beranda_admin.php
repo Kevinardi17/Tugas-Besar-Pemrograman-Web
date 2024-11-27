@@ -1,7 +1,6 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    // Jika user belum login, arahkan kembali ke login
     header("Location: loginadmin.php");
     exit();
 }
@@ -12,7 +11,6 @@ $dbname = 'rentalin.com';
 $username = 'root';
 $password = '';
 
-// Hubungkan ke database
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -32,13 +30,12 @@ try {
 <body>
     <header>
         <h1>Dashboard Admin</h1>
-        <p>Selamat datang, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+        <p>Selamat datang Icik Boss!</p>
     </header>
-        <section id="info">
-            <h2>Informasi Layanan</h2>
-            <p>Anda dapat mengelola layanan dan pelanggan dari menu di atas.</p>
-        </section>
-    </main>
+    <section id="info">
+        <h2>Informasi Layanan</h2>
+        <p>Anda dapat mengelola layanan dan pelanggan dari menu di atas.</p>
+    </section>
     <footer>
         <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
     </footer>

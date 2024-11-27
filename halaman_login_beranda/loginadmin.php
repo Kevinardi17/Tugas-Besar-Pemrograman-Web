@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // Konfigurasi database
 $host = 'localhost';
 $dbname = 'rentalin.com';
@@ -16,6 +14,7 @@ try {
 }
 
 // Proses login
+$error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputUsername = $_POST['username'];
     $inputPassword = $_POST['password'];
@@ -28,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user && password_verify($inputPassword, $user['password'])) {
         // Login berhasil, simpan session
         $_SESSION['username'] = $user['username'];
-        header("Location: beranda.php");
+        header("Location: beranda_admin.php");
         exit();
     } else {
         // Login gagal
@@ -55,14 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form action="loginadmin.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-    
+
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-    
-                <button type="submit">Login</button>
-                <?php if (!empty($error)) echo "<p>$error</p>"; ?>
-            </form>
 
+                <button type="submit">Login</button>
+                <?php if (!empty($error)) echo "<p style='color: red;'>$error</p>"; ?>
+            </form>
         </section>
     </main>
     <footer>
