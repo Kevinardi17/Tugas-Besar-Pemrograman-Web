@@ -136,7 +136,7 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <button type="submit" name="delete">Hapus</button>
         </form>
 
-        <h3>Daftar Layanan</h3>
+        <h2>Daftar Layanan</h2>
         <table border="1">
             <thead>
                 <tr>
@@ -227,7 +227,7 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <button type="submit" name="delete_booking">Hapus</button>
     </form>
 
-    <h3>Daftar Booking</h3>
+    <h2>Daftar Booking</h2>
     <table border="1">
         <thead>
             <tr>
