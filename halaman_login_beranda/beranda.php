@@ -47,7 +47,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 
-    <section id="services" class="services">
+   <section id="services" class="services">
     <h2>Our Services</h2>
     <h1>Di bawah ini merupakan daftar game dan playstation yang tersedia di kantor kami:</h1>
     <div class="service-list">
@@ -56,10 +56,12 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <h3><?php echo htmlspecialchars($service['name']); ?></h3>
                 <p><?php echo htmlspecialchars($service['description']); ?></p>
                 <p>Harga: Rp<?php echo number_format($service['price'], 2, ',', '.'); ?></p>
+                <img src="images/status/<?php echo $service['status'] === 'available' ? 'available.png' : 'unavailable.png'; ?>" alt="<?php echo $service['status']; ?>" width="100">
             </div>
         <?php endforeach; ?>
     </div>
-    </section>
+</section>
+
 
     <section id="booking">
     <h2>Booking Sekarang</h2>
