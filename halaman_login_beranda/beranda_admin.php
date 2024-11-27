@@ -42,6 +42,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("DELETE FROM playstation_services WHERE id = ?");
         $stmt->execute([$id]);
     }
+
+    if (isset($_POST['delete'])) {
+        $id = $_POST['id'];
+    
+        $stmt = $pdo->prepare("DELETE FROM playstation_services WHERE id = ?");
+        $stmt->execute([$id]);
+    
+        // Reorder IDs
+        $pdo->exec("SET @num = 0;");
+        $pdo->exec("UPDATE playstation_services SET id = @num := (@num + 1);");
+        $pdo->exec("ALTER TABLE playstation_services AUTO_INCREMENT = 1;");
+    }
+    
+
+    // Redirect to avoid form resubmission
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
 }
 
 // Fetch all services
@@ -115,6 +132,41 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </section>
+
+        <section id="booking-list">
+    <h2>Daftar Booking</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nomor Booking</th>
+                <th>Nama Pelanggan</th>
+                <th>Layanan</th>
+                <th>Tanggal Booking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $stmt = $pdo->query("
+                SELECT b.booking_number, b.customer_name, s.name AS service_name, b.booking_date 
+                FROM bookings b 
+                JOIN playstation_services s ON b.service_id = s.id
+            ");
+            $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($bookings as $booking):
+            ?>
+            <tr>
+                <td><?php echo htmlspecialchars($booking['booking_number']); ?></td>
+                <td><?php echo htmlspecialchars($booking['customer_name']); ?></td>
+                <td><?php echo htmlspecialchars($booking['service_name']); ?></td>
+                <td><?php echo htmlspecialchars($booking['booking_date']); ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</section>
+
+
     <footer>
         <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
     </footer>

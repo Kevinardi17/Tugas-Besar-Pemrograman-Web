@@ -59,6 +59,28 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         <?php endforeach; ?>
     </div>
+    </section>
+
+    <section id="booking">
+    <h2>Booking Sekarang</h2>
+    <form action="proses_booking.php" method="POST">
+        <label for="service_id">Pilih Layanan:</label>
+        <select name="service_id" id="service_id" required>
+            <?php foreach ($available_services as $service): ?>
+                <option value="<?php echo $service['id']; ?>">
+                    <?php echo htmlspecialchars($service['name']); ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        
+        <label for="customer_name">Nama Anda:</label>
+        <input type="text" name="customer_name" id="customer_name" required>
+        
+        <label for="booking_date">Tanggal Booking:</label>
+        <input type="date" name="booking_date" id="booking_date" required>
+        
+        <button type="submit">Booking Sekarang</button>
+    </form>
 </section>
 
 <hr style="border: 3px solid #333;">
