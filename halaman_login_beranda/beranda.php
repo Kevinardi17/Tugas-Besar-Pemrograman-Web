@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <header>
         <h1>Sewa PlayStation </h1>
-        <p>Seru-seruan main PS kapan saja, di mana saja!</p>
+        <p>Selamat datang <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
     </header>
     <nav>
         <ul>
