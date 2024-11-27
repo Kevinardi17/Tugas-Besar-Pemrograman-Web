@@ -21,6 +21,16 @@ try {
 // Ambil data layanan yang tersedia
 $stmt = $pdo->query("SELECT * FROM playstation_services WHERE status = 'available'");
 $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Ambil data layanan yang tersedia dan belum dipesan
+$stmt = $pdo->query("
+    SELECT ps.* 
+    FROM playstation_services ps 
+    LEFT JOIN bookings b ON ps.id = b.service_id 
+    WHERE ps.status = 'available' AND b.service_id IS NULL
+");
+$available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -46,10 +56,9 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </ul>
 </div>
 
-
-   <section id="services" class="services">
+<section id="services" class="services">
     <h2>Our Services</h2>
-    <h1>Di bawah ini merupakan daftar game dan playstation yang tersedia di kantor kami:</h1>
+    <h1>Di bawah ini merupakan daftar game dan PlayStation yang tersedia di kantor kami:</h1>
     <div class="service-list">
         <?php foreach ($available_services as $service): ?>
             <div class="service-item">
@@ -61,7 +70,6 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
     </div>
 </section>
-
 
     <section id="booking">
     <h2>Booking Sekarang</h2>
