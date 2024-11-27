@@ -64,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             <p>Belum punya akun? <a href="signup.php">Daftar di sini</a></p>
             <p>LOGIN ADMIN <a href="loginadmin.php">Login di sini</a></p> 
-
         </section>
     </main>
     <footer>
