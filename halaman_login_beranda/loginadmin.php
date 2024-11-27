@@ -21,14 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputPassword = $_POST['password'];
 
     // Periksa pengguna di database
-    $stmt = $pdo->prepare("SELECT * FROM data_pelanggan WHERE username = :username");
+    $stmt = $pdo->prepare("SELECT * FROM data_admin WHERE username = :username");
     $stmt->execute(['username' => $inputUsername]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($inputPassword, $user['password'])) {
         // Login berhasil, simpan session
         $_SESSION['username'] = $user['username'];
-        header("Location: beranda.php");
+        header("Location: beranda_admin.php");
         exit();
     } else {
         // Login gagal
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Rentalin.com</title>
+    <title>Login Admin- Rentalin.com</title>
     <link rel="stylesheet" href="styleslogin.css">
 </head>
 <body>
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
     <main>
         <section id="login">
-            <h2>Masuk</h2>
+            <h2>Masuk Admin</h2>
             <form action="login.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Masukkan username" required>
@@ -62,8 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit">Login</button>
                 <?php if (!empty($error)) echo "<p>$error</p>"; ?>
             </form>
-            <p>Belum punya akun? <a href="signup.php">Daftar di sini</a></p>
-            <p>LOGIN ADMIN <a href="loginadmin.php">Login di sini</a></p> 
 
         </section>
     </main>

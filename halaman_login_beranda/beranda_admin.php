@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['username'])) {
     // Jika user belum login, arahkan kembali ke login
-    header("Location: login.php");
+    header("Location: loginadmin.php");
     exit();
 }
 
@@ -19,14 +19,6 @@ try {
 } catch (PDOException $e) {
     die("Koneksi gagal: " . $e->getMessage());
 }
-
-// Ambil data pelanggan (contoh)
-$stmt = $pdo->query("SELECT COUNT(*) as total_pelanggan FROM data_pelanggan");
-$totalPelanggan = $stmt->fetch(PDO::FETCH_ASSOC)['total_pelanggan'];
-
-// Ambil data penyewaan (contoh)
-$stmt = $pdo->query("SELECT COUNT(*) as total_penyewaan FROM penyewaan");
-$totalPenyewaan = $stmt->fetch(PDO::FETCH_ASSOC)['total_penyewaan'];
 ?>
 
 <!DOCTYPE html>
