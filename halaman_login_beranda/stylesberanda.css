@@ -18,6 +18,41 @@ header h1 {
     font-size: 2rem;
 }
 
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.menu h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 5px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -40,33 +75,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #7DC384; 
-}
-
-/* Hero Section */
-/* Styling logo di bagian hero */
-.logo-hero {
-    display: block;
-    margin: 0 auto;
-    width: 150px; /* Sesuaikan ukuran logo */
-    height: auto;
-    margin-bottom: 20px; /* Jarak antara logo dan teks */
-}
-
-.hero {
-    background: linear-gradient(180deg, #6A9C77, #7DC384); 
-    color: #FEF1BC; 
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0.5rem 0;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
 }
 
 button {
@@ -130,84 +138,52 @@ footer p {
     margin: 0;
 }
 
-.contact-box {
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 2px solid #7DC384; 
-    border-radius: 10px;       
-    display: inline-block;     
-    background-color: #FEF1BC; 
-    color: #436E5B;            
-    font-weight: bold;         
-}
 
-.contact-box a {
+/* Tambahkan gaya untuk tombol logout di pojok kanan atas */
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
-    color: #6A9C77;            
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 14px;
 }
 
-.contact-box a:hover {
-    color: #436E5B;            
+.logout-btn:hover {
+    background-color: #e60000;
 }
 
-/* PlayStation Container Styles */
-body {
-    background-color: #000; /* Overriding the body background for PlayStation section */
-    color: #fff;
-    text-align: center;
+.service-list {
+display: grid;
+grid-auto-flow: column; /* Data akan mengalir secara kolom */
+grid-auto-rows: minmax(150px, auto); /* Set tinggi minimum untuk setiap item */
+gap: 20px; /* Jarak antar item */
 }
 
-header h1 {
-    margin-top: 20px;
-    font-size: 2rem;
-    color: #ffffff;
+.service-item {
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 15px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.playstation-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+.service-item h3 {
+margin-top: 0;
 }
 
-.playstation {
-    width: 200px;
-    height: 150px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #111;
-    transition: transform 0.3s;
+.service-item p {
+margin: 5px 0;
 }
 
-.playstation:hover {
-    transform: scale(1.1);
+@media (max-width: 768px) {
+.service-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Sesuaikan layout pada layar kecil */
+    grid-auto-flow: row; /* Pada layar kecil, data disusun kembali secara horizontal */
 }
-
-.playstation.available {
-    border-color: #0f0; /* Green for available */
-}
-
-.playstation.unavailable {
-    border-color: #f00; /* Red for unavailable */
-}
-
-.status-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.playstation p {
-    margin: 5px 0;
-    color: #ffffff;
-    font-size: 1rem;
 }
