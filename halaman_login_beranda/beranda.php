@@ -28,23 +28,7 @@ if (!isset($_SESSION['username'])) {
         </ul>
     </nav>
     <main>
-        <section id="layanan">
-            <h2>Layanan Kami</h2>
-            <p>Kami menyediakan PlayStation lengkap dengan berbagai pilihan game favorit untuk menemani waktu santai Anda.</p>
-        </section>
-        <section id="cara-pesan">
-            <h2>Cara Pesan</h2>
-            <ol>
-                <li>Pilih paket yang diinginkan.</li>
-                <li>Hubungi kami melalui WhatsApp atau telepon.</li>
-                <li>Pesanan akan segera dikirim ke lokasi Anda.</li>
-            </ol>
-        </section>
-        <section id="kontak">
-            <h2>Kontak Kami</h2>
-            <p>Hubungi kami di: <strong>0812-3456-7890</strong></p>
-        </section>
-    </main>
+
     <footer>
         <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
     </footer>
