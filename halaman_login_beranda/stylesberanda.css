@@ -6,6 +6,52 @@ body {
     background-color: #FEF1BC; /* Default background */
 }
 
+/*style hero*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Menyesuaikan dengan tinggi layar */
+    background-color: #f5f5f5; /* Warna latar belakang */
+    padding: 20px;
+    border-top: 10px solid #333; /* Pembatas atas */
+    border-bottom: 10px solid #333; /* Pembatas bawah */
+}
+
+.logo-hero {
+    max-width: 150px; /* Menyesuaikan ukuran logo */
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Ukuran heading */
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Ukuran paragraf */
+    margin: 10px 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
 header {
     background-color: #436E5B; 
     color: #FEF1BC; 
@@ -22,16 +68,28 @@ header h1 {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #333;
+    background-color: #222; /* Warna latar yang lebih elegan */
     color: white;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 8px; /* Membuat sudut lebih membulat */
+    padding: 15px;
     font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    width: 200px; /* Lebar menu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+}
+
+.menu:hover {
+    transform: translateY(-5px); /* Sedikit naik saat dihover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih kuat */
 }
 
 .menu h3 {
-    margin: 0 0 5px 0;
-    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #f1c40f; /* Warna judul berbeda */
+    text-align: center; /* Tengah */
+    border-bottom: 2px solid #f1c40f; /* Garis bawah untuk judul */
+    padding-bottom: 5px;
 }
 
 .menu ul {
@@ -41,16 +99,29 @@ header h1 {
 }
 
 .menu ul li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    background-color: #444; /* Background tiap item */
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Animasi hover item */
+}
+
+.menu ul li:hover {
+    background-color: #555; /* Warna berubah saat dihover */
 }
 
 .menu ul li a {
-    color: white;
+    color: #f9f9f9;
     text-decoration: none;
+    font-weight: bold; /* Menekankan link */
+    display: block; /* Memperluas klik area */
+    padding: 5px;
+    transition: color 0.3s ease; /* Animasi warna */
 }
 
 .menu ul li a:hover {
-    text-decoration: underline;
+    color: #1abc9c; /* Warna hijau saat dihover */
+    text-decoration: none;
 }
 
 nav ul {
@@ -90,6 +161,79 @@ button {
 
 button:hover {
     background-color: #6A9C77; 
+}
+
+#booking {
+    background-color: #f9f9f9; /* Latar belakang terang untuk form */
+    padding: 40px 20px;
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+    max-width: 600px; /* Batasi lebar form */
+    margin: 20px auto; /* Center form di layar */
+    text-align: center;
+}
+
+#booking h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#booking form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#booking label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+#booking select,
+#booking input[type="text"],
+#booking input[type="date"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#booking button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#booking button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #booking {
+        padding: 20px 10px;
+    }
+    
+    #booking h2 {
+        font-size: 1.5rem;
+    }
+    
+    #booking select,
+    #booking input,
+    #booking button {
+        font-size: 0.9rem;
+    }
 }
 
 /* Services Section */
@@ -188,4 +332,66 @@ margin: 5px 0;
 }
 }
 
-/*css untuk merapihkan tabel crud*/
+/*css untuk merapihkan gambar ps dan gamenya*/
+section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.game {
+    width: 100%;
+    max-width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.game img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .game-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+

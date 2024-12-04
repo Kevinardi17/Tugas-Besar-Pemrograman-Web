@@ -22,8 +22,8 @@ if (!isset($_SESSION['username'])) {
 
     <section>
         <h2>Lokasi Kami</h2>
-        <p>Jl. Raya Rentalin No. 123, Jakarta</p>
-        <p>Telepon: 0812-3456-7890</p>
+        <p>Jl. Scorpio No.18, Rajabasa, Kec. Rajabasa, Kota Bandar Lampung, Lampung</p>
+        <p>Telepon: 0857-6442-5294 (Admin)</p>
     </section>
 
     <footer>

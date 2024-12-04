@@ -25,8 +25,11 @@ if (!isset($_SESSION['username'])) {
         <ol>
             <li>Kunjungi halaman <a href="beranda.php#services">layanan</a>.</li>
             <li>Pilih layanan yang ingin disewa.</li>
-            <li>Hubungi kami melalui <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a> untuk konfirmasi.</li>
-            <li>Lakukan pembayaran dan nikmati layanan kami.</li>
+            <li>Lakukan booking sesuai dengan menu yang tertera.</li>
+            <li>Anda akan mendapat nomor booking.</li>
+            <li>Hubungi kami melalui <a href="https://wa.me/6285764425294" target="_blank">WhatsApp</a> untuk konfirmasi.</li>
+            <li>Silahkan menuju kantor kami untuk mengambil Playstation</li>
+            <li>ENJOY THE GAME!!</li>
         </ol>
     </section>
 
