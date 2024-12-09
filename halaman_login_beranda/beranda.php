@@ -181,7 +181,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <section id="home" class="hero">
         <!-- Logo di tengah -->
         <img src="images/status/RENTALIN.COM_20241204_201717_0000.png" alt="Rentalin Logo" class="logo-hero">
-        <h1>Welcome to Rentalin.com</h1>
+        <h1>Welcome to rentalin.com</h1>
         <p>Experience gaming like never before!</p>
         <a href="#services" class="btn">View Services</a>
     </section>
