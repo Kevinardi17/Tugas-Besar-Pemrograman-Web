@@ -174,7 +174,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <header>
         <h1>Sewa PlayStation</h1>
-        <p>Selamat datang <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+        <p>Selamat Datang <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
         <a href="logout.php" class="logout-btn">Logout</a>
     </header>
 
