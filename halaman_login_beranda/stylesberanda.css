@@ -2,8 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #436E5B; 
-    background-color: #FEF1BC; /* Default background */
+    color: #436E5B;
+    background-color: #FEF1BC;
+    /* Default background */
 }
 
 /*style hero*/
@@ -13,25 +14,32 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh; /* Menyesuaikan dengan tinggi layar */
-    background-color: #f5f5f5; /* Warna latar belakang */
+    min-height: 30vh;
+    /* Menyesuaikan dengan tinggi layar */
+    background-color: #f5f5f5;
+    /* Warna latar belakang */
     padding: 20px;
-    border-top: 10px solid #333; /* Pembatas atas */
-    border-bottom: 10px solid #333; /* Pembatas bawah */
+    border-top: 10px solid #333;
+    /* Pembatas atas */
+    border-bottom: 10px solid #333;
+    /* Pembatas bawah */
 }
 
 .logo-hero {
-    max-width: 300px; /* Menyesuaikan ukuran logo */
+    max-width: 300px;
+    /* Menyesuaikan ukuran logo */
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 3rem; /* Ukuran heading */
+    font-size: 3rem;
+    /* Ukuran heading */
     margin: 10px 0;
 }
 
 .hero p {
-    font-size: 1.5rem; /* Ukuran paragraf */
+    font-size: 1.5rem;
+    /* Ukuran paragraf */
     margin: 10px 0 20px;
 }
 
@@ -53,8 +61,8 @@ body {
 
 
 header {
-    background-color: #436E5B; 
-    color: #FEF1BC; 
+    background-color: #436E5B;
+    color: #FEF1BC;
     padding: 1rem;
     text-align: center;
 }
@@ -68,27 +76,37 @@ header h1 {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #222; /* Warna latar yang lebih elegan */
+    background-color: #222;
+    /* Warna latar yang lebih elegan */
     color: white;
-    border-radius: 8px; /* Membuat sudut lebih membulat */
+    border-radius: 8px;
+    /* Membuat sudut lebih membulat */
     padding: 15px;
     font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-    width: 200px; /* Lebar menu */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Efek bayangan */
+    width: 200px;
+    /* Lebar menu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animasi hover */
 }
 
 .menu:hover {
-    transform: translateY(-5px); /* Sedikit naik saat dihover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih kuat */
+    transform: translateY(-5px);
+    /* Sedikit naik saat dihover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Efek bayangan lebih kuat */
 }
 
 .menu h3 {
     margin: 0 0 10px 0;
     font-size: 18px;
-    color: #f1c40f; /* Warna judul berbeda */
-    text-align: center; /* Tengah */
-    border-bottom: 2px solid #f1c40f; /* Garis bawah untuk judul */
+    color: #f1c40f;
+    /* Warna judul berbeda */
+    text-align: center;
+    /* Tengah */
+    border-bottom: 2px solid #f1c40f;
+    /* Garis bawah untuk judul */
     padding-bottom: 5px;
 }
 
@@ -100,27 +118,34 @@ header h1 {
 
 .menu ul li {
     margin-bottom: 8px;
-    background-color: #444; /* Background tiap item */
+    background-color: #444;
+    /* Background tiap item */
     border-radius: 5px;
     padding: 5px;
-    transition: background-color 0.3s ease; /* Animasi hover item */
+    transition: background-color 0.3s ease;
+    /* Animasi hover item */
 }
 
 .menu ul li:hover {
-    background-color: #555; /* Warna berubah saat dihover */
+    background-color: #555;
+    /* Warna berubah saat dihover */
 }
 
 .menu ul li a {
     color: #f9f9f9;
     text-decoration: none;
-    font-weight: bold; /* Menekankan link */
-    display: block; /* Memperluas klik area */
+    font-weight: bold;
+    /* Menekankan link */
+    display: block;
+    /* Memperluas klik area */
     padding: 5px;
-    transition: color 0.3s ease; /* Animasi warna */
+    transition: color 0.3s ease;
+    /* Animasi warna */
 }
 
 .menu ul li a:hover {
-    color: #1abc9c; /* Warna hijau saat dihover */
+    color: #1abc9c;
+    /* Warna hijau saat dihover */
     text-decoration: none;
 }
 
@@ -139,18 +164,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FEF1BC; 
+    color: #FEF1BC;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #7DC384; 
+    color: #7DC384;
 }
 
 button {
-    background-color: #7DC384; 
-    color: #FEF1BC; 
+    background-color: #7DC384;
+    color: #FEF1BC;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -160,16 +185,21 @@ button {
 }
 
 button:hover {
-    background-color: #6A9C77; 
+    background-color: #6A9C77;
 }
 
 #booking {
-    background-color: #f9f9f9; /* Latar belakang terang untuk form */
+    background-color: #f9f9f9;
+    /* Latar belakang terang untuk form */
     padding: 40px 20px;
-    border-radius: 10px; /* Membuat sudut melengkung */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
-    max-width: 600px; /* Batasi lebar form */
-    margin: 20px auto; /* Center form di layar */
+    border-radius: 10px;
+    /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Memberikan efek bayangan */
+    max-width: 600px;
+    /* Batasi lebar form */
+    margin: 20px auto;
+    /* Center form di layar */
     text-align: center;
 }
 
@@ -224,11 +254,11 @@ button:hover {
     #booking {
         padding: 20px 10px;
     }
-    
+
     #booking h2 {
         font-size: 1.5rem;
     }
-    
+
     #booking select,
     #booking input,
     #booking button {
@@ -239,7 +269,7 @@ button:hover {
 /* Services Section */
 .services {
     background-color: #FEF1BC;
-    color: #436E5B; 
+    color: #436E5B;
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -252,28 +282,28 @@ button:hover {
 .service {
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #6A9C77; 
+    border: 1px solid #6A9C77;
     border-radius: 10px;
-    background-color: #7DC384; 
-    color: #FEF1BC; 
+    background-color: #7DC384;
+    color: #FEF1BC;
 }
 
 .service ul {
     list-style-type: disc;
-    margin: 1rem 0 0 1.5rem; 
+    margin: 1rem 0 0 1.5rem;
     padding: 0;
-    color: #FEF1BC; 
+    color: #FEF1BC;
 }
 
 .service ul li {
-    margin-bottom: 0.5rem; 
-    font-size: 1rem; 
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 /* Footer Section */
 footer {
-    background-color: #436E5B; 
-    color: #FEF1BC; 
+    background-color: #436E5B;
+    color: #FEF1BC;
     text-align: center;
     padding: 1rem;
 }
@@ -303,39 +333,45 @@ footer p {
 }
 
 .service-list {
-display: grid;
-grid-auto-flow: column; /* Data akan mengalir secara kolom */
-grid-auto-rows: minmax(150px, auto); /* Set tinggi minimum untuk setiap item */
-gap: 20px; /* Jarak antar item */
+    display: grid;
+    grid-auto-flow: column;
+    /* Data akan mengalir secara kolom */
+    grid-auto-rows: minmax(150px, auto);
+    /* Set tinggi minimum untuk setiap item */
+    gap: 20px;
+    /* Jarak antar item */
 }
 
 .service-item {
-background-color: #f9f9f9;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 15px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .service-item h3 {
-margin-top: 0;
+    margin-top: 0;
 }
 
 .service-item p {
-margin: 5px 0;
+    margin: 5px 0;
 }
 
 @media (max-width: 768px) {
-.service-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Sesuaikan layout pada layar kecil */
-    grid-auto-flow: row; /* Pada layar kecil, data disusun kembali secara horizontal */
-}
+    .service-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Sesuaikan layout pada layar kecil */
+        grid-auto-flow: row;
+        /* Pada layar kecil, data disusun kembali secara horizontal */
+    }
 }
 
 /*css untuk merapihkan gambar ps dan gamenya*/
 section {
     margin: 40px 0;
     text-align: center;
+    color: #333;
 }
 
 h2 {
@@ -395,5 +431,4 @@ h2 {
     }
 }
 
-/* css untuk tabel crud di beranda_admin */
 

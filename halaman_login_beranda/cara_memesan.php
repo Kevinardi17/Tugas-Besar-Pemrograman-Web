@@ -53,44 +53,24 @@ if (!isset($_SESSION['username'])) {
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
 
-        h1, h2 {
-            color: #0078d7;
+        h1 {
+            color:white
         }
 
-        ol {
+        h2 {
+            color:#333
+        }
+
+        ul {
+            list-style-type: disc;
             padding-left: 20px;
-            list-style: none;
-            counter-reset: list-counter;
         }
 
-        ol li {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        ol li::before {
-            counter-increment: list-counter;
-            content: counter(list-counter) ".";
-            font-size: 18px;
-            font-weight: bold;
-            margin-right: 10px;
-            color: #0078d7;
-        }
-
-        .step-icon {
-            width: 30px;
-            height: 30px;
-            background-color: #0078d7;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            font-weight: bold;
+        li {
+            margin-bottom: 10px;
         }
 
         a {
@@ -106,7 +86,7 @@ if (!isset($_SESSION['username'])) {
             text-align: center;
             padding: 10px;
             background-color: #436E5B;
-            color: white;
+            color: #f5deb3; /* Warna krem untuk teks footer */
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -120,41 +100,26 @@ if (!isset($_SESSION['username'])) {
     </header>
 
     <section>
+        <h2>Peraturan Pemesanan</h2>
+        <ul>
+            <li>Menyerahkan KTP/KTM asli.</li>
+            <li>Uang jaminan sebesar Rp. 50.000.</li>
+            <li>Menyerahkan SIM motor atau mobil.</li>
+        </ul>
+
         <h2>Panduan Pemesanan</h2>
-        <ol>
-            <li>
-                <div class="step-icon">1</div>
-                Kunjungi halaman <a href="beranda.php#services">layanan</a>.
-            </li>
-            <li>
-                <div class="step-icon">2</div>
-                Pilih layanan yang ingin disewa.
-            </li>
-            <li>
-                <div class="step-icon">3</div>
-                Lakukan booking sesuai dengan menu yang tertera.
-            </li>
-            <li>
-                <div class="step-icon">4</div>
-                Anda akan mendapat nomor booking.
-            </li>
-            <li>
-                <div class="step-icon">5</div>
-                Hubungi kami melalui <a href="https://wa.me/6285764425294" target="_blank">WhatsApp</a> untuk konfirmasi.
-            </li>
-            <li>
-                <div class="step-icon">6</div>
-                Silahkan menuju kantor kami untuk mengambil Playstation.
-            </li>
-            <li>
-                <div class="step-icon">7</div>
-                <strong>ENJOY THE GAME!!</strong>
-            </li>
-        </ol>
+        <ul>
+            <li>Kunjungi halaman <a href="beranda.php#services">layanan</a> di situs kami untuk melihat berbagai pilihan layanan yang tersedia.</li>
+            <li>Pilih layanan yang ingin Anda gunakan dan lakukan proses booking melalui menu yang telah kami sediakan.</li>
+            <li>Setelah booking berhasil, Anda akan menerima nomor booking sebagai bukti pemesanan.</li>
+            <li>Hubungi kami melalui <a href="https://wa.me/6285764425294" target="_blank">WhatsApp</a> untuk melakukan konfirmasi pemesanan.</li>
+            <li>Kunjungi kantor kami untuk mengambil perangkat yang telah dipesan, dengan membawa nomor booking dan dokumen yang diperlukan.</li>
+            <li>Terakhir, nikmati layanan kami dan rasakan pengalaman bermain yang menyenangkan. <strong>ENJOY THE GAME!</strong></li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
+        <p>&copy; 2024 <span style="color: #f5deb3;">Rentalin.com</span>. All rights reserved.</p>
     </footer>
 </body>
 </html>
