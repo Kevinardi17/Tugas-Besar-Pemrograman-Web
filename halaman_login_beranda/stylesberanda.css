@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #436E5B;
+    color: #734128;
     background-color: #FEF1BC;
     /* Default background */
 }
@@ -14,7 +14,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 30vh;
+    min-height: 10vh;
+
     /* Menyesuaikan dengan tinggi layar */
     background-color: #f5f5f5;
     /* Warna latar belakang */
@@ -26,7 +27,7 @@ body {
 }
 
 .logo-hero {
-    max-width: 300px;
+    max-width: 200px;
     /* Menyesuaikan ukuran logo */
     margin-bottom: 20px;
 }
@@ -61,7 +62,7 @@ body {
 
 
 header {
-    background-color: #436E5B;
+    background-color: #7B3F00;
     color: #FEF1BC;
     padding: 1rem;
     text-align: center;
@@ -302,7 +303,8 @@ button:hover {
 
 /* Footer Section */
 footer {
-    background-color: #436E5B;
+    background-color: #7B3F00;
+
     color: #FEF1BC;
     text-align: center;
     padding: 1rem;
@@ -430,5 +432,3 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
-
-

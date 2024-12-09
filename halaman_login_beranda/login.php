@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <header>
-        <h1>Login ke Rentalin.com </h1>
+        <h1>Login ke rentalin.com </h1>
     </header>
     <main>
         <section id="login">

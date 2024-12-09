@@ -47,7 +47,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
         header {
-            background-color: #3b6b3d;
+            background-color: #7B3F00;
             /* Hijau Daun */
             color: #f1e6d1;
             /* Cream */
@@ -69,8 +69,9 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
         .hero {
+            min-width: 100px;
             text-align: center;
-            background-color: #a8d5ba;
+            background-color: #grey;
             /* Hijau Mint */
             padding: 60px 20px;
             border-radius: 8px;
@@ -158,7 +159,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
         footer {
-            background-color: #2e4d2e;
+            background-color: #7B3F00;
             /* Hijau Gelap */
             color: #f1e6d1;
             /* Cream */
