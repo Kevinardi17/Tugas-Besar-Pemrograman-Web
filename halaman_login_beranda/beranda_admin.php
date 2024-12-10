@@ -197,6 +197,7 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <header>
         <h1>Dashboard Admin</h1>
         <p>Selamat datang Icik Boss!</p>
+        <a href="logout.php" class="logout-btn">Logout</a>
     </header>
     <section id="crud">
         <h2>Kelola Layanan PlayStation</h2>

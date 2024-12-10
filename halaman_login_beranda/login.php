@@ -39,12 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Rentalin.com</title>
     <link rel="stylesheet" href="styleslogin.css">
 </head>
+
 <body>
     <header>
         <h1>Login ke rentalin.com </h1>
@@ -55,19 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form action="login.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-    
+
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-    
+
                 <button type="submit">Login</button>
-                <?php if (!empty($error)) echo "<p>$error</p>"; ?>
+                <?php if (!empty($error))
+                    echo "<p>$error</p>"; ?>
             </form>
             <p>Belum punya akun? <a href="signup.php">Daftar di sini</a></p>
-            <p>LOGIN ADMIN <a href="loginadmin.php">Login di sini</a></p> 
+            <p>LOGIN ADMIN <a href="loginadmin.php">Login di sini</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

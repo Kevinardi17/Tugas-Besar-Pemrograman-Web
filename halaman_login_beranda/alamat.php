@@ -56,6 +56,10 @@ if (!isset($_SESSION['username'])) {
             font-size: 28px;
             color: #007BFF;
         }
+        
+        p {
+            color:#f4f4f4
+        }
 
         .address {
             font-size: 18px;
@@ -79,17 +83,15 @@ if (!isset($_SESSION['username'])) {
             transform: scale(1.05);
         }
 
-        footer {
-            background-color: #f4f4f4;
-            color: #666;
-            text-align: center;
-            padding: 15px 0;
-            border-top: 1px solid #ddd;
-        }
 
-        footer p {
-            margin: 0;
-            font-size: 14px;
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #436E5B;
+            color: white; /* Warna krem untuk teks footer */
+            position: relative;
+            width: 100%;
+            
         }
     </style>
 </head>
@@ -104,7 +106,7 @@ if (!isset($_SESSION['username'])) {
         <h2>Lokasi Kami</h2>
         <p class="address">Jl. Scorpio No.18, Rajabasa, Kec. Rajabasa, Kota Bandar Lampung, Lampung</p>
         <p class="address">Telepon: <a href="tel:085764425294"
-                style="color: #3b6b3d; text-decoration: none;">0857-6442-5294 (Admin)</a></p>
+                style="color: #f4f4f4; text-decoration: underline; text-decoration-thickness: 5px; ;">0857-6442-5294 (Admin)</a></p>
 
         <!-- Tautan ke Google Maps -->
         <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Scorpio+No.18,+Rajabasa,+Kec.+Rajabasa,+Kota+Bandar+Lampung,+Lampung"
@@ -114,7 +116,7 @@ if (!isset($_SESSION['username'])) {
     </section>
 
     <footer>
-        <p>&copy; 2024 Rentalin.com. All rights reserved.</p>
+    <p>&copy; 2024 <span style="color: #f5deb3;">Rentalin.com</span>. All rights reserved.</p>
     </footer>
 </body>
 

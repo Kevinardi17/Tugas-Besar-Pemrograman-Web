@@ -5,72 +5,57 @@ body {
     color: #734128;
     background-color: #FEF1BC;
     /* Default background */
-}
 
-/*style hero*/
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    /* Untuk posisi overlay */
+    height: 90vh;
+    /* Mengatur tinggi section agar memenuhi viewport */
+    background-image: url('https://img.freepik.com/free-vector/futuristic-video-game-controller-background-with-text-space_1017-54730.jpg');
+    /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    /* Menyesuaikan gambar agar menutupi seluruh area */
+    background-position: center;
+    /* Memusatkan gambar */
+    color: white;
+    /* Mengubah warna teks menjadi putih */
     text-align: center;
-    min-height: 10vh;
-
-    /* Menyesuaikan dengan tinggi layar */
-    background-color: #f5f5f5;
-    /* Warna latar belakang */
-    padding: 20px;
-    border-top: 10px solid #333;
-    /* Pembatas atas */
-    border-bottom: 10px solid #333;
-    /* Pembatas bawah */
+    /* Menyelaraskan teks di tengah */
 }
-
-.logo-hero {
-    max-width: 200px;
-    /* Menyesuaikan ukuran logo */
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    /* Ukuran heading */
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    /* Ukuran paragraf */
-    margin: 10px 0 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-
 
 header {
-    background-color: #7B3F00;
-    color: #FEF1BC;
-    padding: 1rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    /* Untuk posisi elemen absolut di dalamnya */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Bayangan untuk efek kedalaman */
+    position: relative;
+    /* Untuk posisi overlay */
+    height: 27vh;
+    background-image: url('https://img.freepik.com/premium-photo/wallpaper-background-style-graffiti-playstation-controller_250469-24697.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    /* Ukuran font lebih besar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Bayangan teks untuk efek kedalaman */
+    font-family: 'Arial Black', sans-serif;
+    /* Menggunakan font yang lebih tebal */
+}
+
+header p {
+    font-size: 1.2rem;
+    /* Ukuran font untuk paragraf */
+    margin: 0.5rem 0 1rem;
+    /* Margin untuk jarak */
 }
 
 .menu {
@@ -304,14 +289,15 @@ button:hover {
 /* Footer Section */
 footer {
     background-color: #7B3F00;
-
     color: #FEF1BC;
     text-align: center;
     padding: 1rem;
+    position:fixed;
 }
 
 footer p {
     margin: 0;
+    text-align: center;
 }
 
 
@@ -320,14 +306,14 @@ footer p {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #ff4d4d;
+    background-color: #9000b4;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 20px 35px;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .logout-btn:hover {
@@ -374,6 +360,13 @@ section {
     margin: 40px 0;
     text-align: center;
     color: #333;
+
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:#f9f9f9;
 }
 
 h2 {
@@ -387,6 +380,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     justify-items: center;
+
 }
 
 .game {
@@ -394,11 +388,13 @@ h2 {
     max-width: 180px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
     transition: transform 0.3s;
+
+    
 }
 
 .game img {
@@ -431,4 +427,123 @@ h2 {
     .game-gallery {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+/* CSS untuk section hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 10vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-top: 10px solid #333;
+    /* Pembatas atas */
+    border-bottom: 10px solid #333;
+    /* Pembatas bawah */
+
+    min-width: 100px;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.hero img {
+    max-width: 500px;
+    margin-bottom: 2px;
+}
+
+.logo-hero {
+    max-width: 50px;
+    /* Menyesuaikan ukuran logo */
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    /* Ukuran heading */
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    /* Ukuran paragraf */
+    margin: 10px 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background-image: url('https://images4.alphacoders.com/130/1303457.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+/* Overlay untuk transparansi */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    /* Hitam dengan transparansi 50% */
+    z-index: 1;
+    /* Menempatkan overlay di atas gambar */
+}
+
+.logo-hero {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+p,
+.btn {
+    position: relative;
+    /* Agar teks dan tombol berada di atas overlay */
+    z-index: 2;
+    /* Menempatkan teks dan tombol di atas overlay */
+}
+
+/* Gaya untuk tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    /* Warna latar belakang saat hover */
 }

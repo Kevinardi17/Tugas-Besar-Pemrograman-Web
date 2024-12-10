@@ -46,73 +46,6 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             /* Cream */
         }
 
-        header {
-            background-color: #7B3F00;
-            /* Hijau Daun */
-            color: #f1e6d1;
-            /* Cream */
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .logout-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            text-decoration: none;
-            background-color: #ff5c5c;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        .hero {
-            min-width: 100px;
-            text-align: center;
-            background-color: #grey;
-            /* Hijau Mint */
-            padding: 60px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .hero img {
-            max-width: 400px;
-            margin-bottom: 2px;
-        }
-
-        .menu {
-            background: #f1e6d1;
-            /* Cream */
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        .menu ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: #3b6b3d;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .menu ul li a:hover {
-            color: #a8d5ba;
-        }
-
         section {
             max-width: 1200px;
             margin: 20px auto;
@@ -120,6 +53,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
         }
 
         .services h2 {
@@ -141,31 +75,14 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             flex: 1 1 calc(33.333% - 20px);
             text-align: center;
-        }
 
-        .game-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            justify-items: center;
-            margin-top: 20px;
-        }
-
-        .game-gallery .game img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #7B3F00;
-            /* Hijau Gelap */
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #f1e6d1;
-            /* Cream */
             text-align: center;
             padding: 10px;
-            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -181,7 +98,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <section id="home" class="hero">
         <!-- Logo di tengah -->
-        <img src="images/status/RENTALIN.COM_20241204_201717_0000.png" alt="Rentalin Logo" class="logo-hero">
+        <img src="images/status/rentalin.png" alt="Rentalin Logo" class="logo-hero">
         <h1>Welcome to rentalin.com</h1>
         <p>Experience gaming like never before!</p>
         <a href="#services" class="btn">View Services</a>
@@ -197,7 +114,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <section id="services" class="services">
         <h2>Our Services</h2>
-        <h1>Di bawah ini merupakan daftar game dan Playstation yang sedang tersedia di kantor kami:</h1>
+        <h2>Di bawah ini merupakan daftar game dan Playstation yang sedang tersedia di kantor kami:</h2>
         <div class="service-list">
             <?php foreach ($available_services as $service): ?>
                 <div class="service-item">
@@ -233,8 +150,8 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </form>
     </section>
 
-    <hr style="border: 3px solid #333;">
-    <h2 style="text-align: center;">List game dan Playstation</h2>
+    <hr style="border: 10px solid #white;">
+    <h1 style="text-align: center;">List game dan Playstation</h1>
     <section id="promo">
         <p class="center-text">Masih banyak lagi berbagai macam pilihan game ada di dalam Playstation 3, 4, dan 5</p>
         <br>
@@ -242,9 +159,8 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </section>
 
     <section id="ps3-games">
-        <h2>PlayStation 3 Games</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Sony-PlayStation-3-2001A-wController-L.jpg"
-            width="400" style="margin-bottom: 20px;">
+        <h1>PlayStation 3 Games</h1>
+        <img src="images/status/ps3.png" width="400" style="margin-bottom: 20px;">
         <div class="game-gallery">
             <div class="game">
                 <img src="https://assets.hongkiat.com/uploads/ps3-game-covers/God-of-War-3.jpg" alt="PS3 Game 1">
@@ -259,13 +175,13 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <img src="https://i.pinimg.com/736x/a9/e9/01/a9e9018f7f8b77ebb350e7b5a3ad1aa8.jpg" alt="PS3 Game 4">
             </div>
             <div class="game">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuFYiLQmM1iT-4V03-SNGckgPAf0UZY2p4pA&s" alt="PS3 Game 4">
-        </div>    
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuFYiLQmM1iT-4V03-SNGckgPAf0UZY2p4pA&s"
+                    alt="PS3 Game 4">
+            </div>
     </section>
     <section id="ps4-games">
         <h2>PlayStation 4 Games</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwG0XkR2CbYZXQYM_jw_vCudaaQfuvOu5fA&s"
-            width="400" style="margin-bottom: 20px;">
+        <img src="images/status/ps4.png" width="400" style="margin-bottom: 20px;">
         <div class="game-gallery">
             <div class="game">
                 <img src="https://i.pinimg.com/236x/d9/b2/9d/d9b29da8347554a7aa63cb947171aef8.jpg" alt="PS4 Game 1">
@@ -282,13 +198,12 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="game">
                 <img src="https://i.pinimg.com/736x/08/78/31/08783142e6e76a5e511aab35db7ae1e0.jpg" alt="PS3 Game 4">
-        </div>
+            </div>
     </section>
 
     <section id="ps5-games">
         <h2>PlayStation 5 Games</h2>
-        <img src="https://atlas-content-cdn.pixelsquid.com/assets_v2/245/2452423176773178782/jpeg-600/G03.jpg?modifiedAt=1"
-            width="400" alt="PS5 Console" style="margin-bottom: 20px;">
+        <img src="images/status/ps5.png" width="400" alt="PS5 Console" style="margin-bottom: 20px;">
         <div class="game-gallery">
             <div class="game">
                 <img src="https://www.vgstores.ng/wp-content/uploads/2024/05/Assassins-Creed-Shadows-PS5-469x600-1-300x400.webp"
@@ -308,7 +223,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="game">
                 <img src="https://i.pinimg.com/474x/6a/58/84/6a5884622879ed7cf0dc268539b92d8d.jpg" alt="PS3 Game 4">
-        </div>
+            </div>
     </section>
 
     <footer>
