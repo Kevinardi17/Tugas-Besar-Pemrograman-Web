@@ -89,9 +89,9 @@ if (!isset($_SESSION['username'])) {
             padding: 10px;
             background-color: #436E5B;
             color: white; /* Warna krem untuk teks footer */
-            position: relative;
+            position: fixed;
             width: 100%;
-            
+            bottom: 0;
         }
     </style>
 </head>

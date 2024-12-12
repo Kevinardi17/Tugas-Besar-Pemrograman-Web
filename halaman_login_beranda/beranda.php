@@ -159,7 +159,7 @@ $available_services = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </section>
 
     <section id="ps3-games">
-        <h1>PlayStation 3 Games</h1>
+        <h2>PlayStation 3 Games</h2>
         <img src="images/status/ps3.png" width="400" style="margin-bottom: 20px;">
         <div class="game-gallery">
             <div class="game">
